@@ -4,7 +4,7 @@ import ldap
 
 def main():
     
-    server = "servername"
+    server = "ldapprovider001.lcsee.wvu.edu"
     who = ""
     cred = ""
     
@@ -21,7 +21,7 @@ def main():
         print "Couldn't Connect. %s " % error_message
         
 def my_search(l, keyword):
-
+            
     base = ""
     scope = ldap.SCOPE_SUBTREE
     filter = "cn=" + "*" + keyword + "*"
@@ -48,7 +48,7 @@ def my_search(l, keyword):
                 try:
                     name = entry[1]['cn'][0]
                     email = entry[1]['mail'][0]
-                    count + 1 = count 
+                    count = count + 1 
 
 
                     print "%d.\nName: %s\nDescription: %s\nE-mail: %s\nPhone: %s\n" %\
