@@ -57,3 +57,6 @@ def my_search(l, keyword):
                     pass
     except ldap.LDAPError, error_message:
         print error_message
+
+if __name__=='__main__':
+    main()
