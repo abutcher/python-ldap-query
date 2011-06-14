@@ -1,0 +1,15 @@
+Pre-depends: apache or w/e web configuration necessary, mod_python
+
+Update python.conf to point to the path from where the website will be
+served.
+
+python.conf must be places id /etc/apache2/conf.d/python.conf, back up
+the original!
+
+Restart apache and you're good to go.  Make sure the web user has
+group ownership of the python file you want to run.
+
+--
+
+Update lines 9 and 24 to hold the correct links, perhaps localhost if
+you're testing on a vm.
